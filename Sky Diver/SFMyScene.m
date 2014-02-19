@@ -8,22 +8,37 @@
 
 #import "SFMyScene.h"
 
+static const uint32_t skydiver = 0x1 << 0;
+static const uint32_t eagle = 0x1 << 1;
+static const uint32_t pigeon = 0x1 << 2;
+
+@interface SFMyScene ()
+
+@property (strong, nonatomic) SKSpriteNode *mainCharacter;
+@property (nonatomic) int time;
+
+@end
+
 @implementation SFMyScene
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+        for (int i = 0; i < 2; i++) {
+            SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"background"];
+            background.name = @"background";
+            background.anchorPoint = CGPointZero;
+            background.position = CGPointMake(i * background.size.width, 0);
+            background.size = self.size;
+            
+            [self addChild:background];
+            
+        }
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
-        
-        [self addChild:myLabel];
+        self.mainCharacter = [[SKSpriteNode alloc] initWithImageNamed:@"skydiver"];
+        self.mainCharacter.name = @"skydiver";
+        self.mainCharacter.position = CGPointMake(50, 100);
     }
     return self;
 }

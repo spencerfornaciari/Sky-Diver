@@ -24,6 +24,7 @@
 		89CE3E6518B49A880096D5ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E4018B49A880096D5ED /* UIKit.framework */; };
 		89CE3E6D18B49A880096D5ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E6B18B49A880096D5ED /* InfoPlist.strings */; };
 		89CE3E6F18B49A880096D5ED /* Sky_DiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */; };
+		89CE3E7918B49A9E0096D5ED /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E7818B49A9E0096D5ED /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		89CE3E6A18B49A880096D5ED /* Sky DiverTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sky DiverTests-Info.plist"; sourceTree = "<group>"; };
 		89CE3E6C18B49A880096D5ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sky_DiverTests.m; sourceTree = "<group>"; };
+		89CE3E7818B49A9E0096D5ED /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		89CE3E4418B49A880096D5ED /* Sky Diver */ = {
 			isa = PBXGroup;
 			children = (
+				89CE3E7818B49A9E0096D5ED /* background.png */,
 				89CE3E4D18B49A880096D5ED /* SFAppDelegate.h */,
 				89CE3E4E18B49A880096D5ED /* SFAppDelegate.m */,
 				89CE3E5018B49A880096D5ED /* Main.storyboard */,
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89CE3E4918B49A880096D5ED /* InfoPlist.strings in Resources */,
+				89CE3E7918B49A9E0096D5ED /* background.png in Resources */,
 				89CE3E5C18B49A880096D5ED /* Images.xcassets in Resources */,
 				89CE3E5A18B49A880096D5ED /* Spaceship.png in Resources */,
 				89CE3E5218B49A880096D5ED /* Main.storyboard in Resources */,
