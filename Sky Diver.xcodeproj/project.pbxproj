@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		89CE3E3D18B49A880096D5ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E3C18B49A880096D5ED /* Foundation.framework */; };
+		89CE3E3F18B49A880096D5ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E3E18B49A880096D5ED /* CoreGraphics.framework */; };
+		89CE3E4118B49A880096D5ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E4018B49A880096D5ED /* UIKit.framework */; };
+		89CE3E4318B49A880096D5ED /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E4218B49A880096D5ED /* SpriteKit.framework */; };
+		89CE3E4918B49A880096D5ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E4718B49A880096D5ED /* InfoPlist.strings */; };
+		89CE3E4B18B49A880096D5ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3E4A18B49A880096D5ED /* main.m */; };
+		89CE3E4F18B49A880096D5ED /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3E4E18B49A880096D5ED /* SFAppDelegate.m */; };
+		89CE3E5218B49A880096D5ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E5018B49A880096D5ED /* Main.storyboard */; };
+		89CE3E5518B49A880096D5ED /* SFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3E5418B49A880096D5ED /* SFViewController.m */; };
+		89CE3E5818B49A880096D5ED /* SFMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3E5718B49A880096D5ED /* SFMyScene.m */; };
+		89CE3E5A18B49A880096D5ED /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E5918B49A880096D5ED /* Spaceship.png */; };
+		89CE3E5C18B49A880096D5ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E5B18B49A880096D5ED /* Images.xcassets */; };
+		89CE3E6318B49A880096D5ED /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E6218B49A880096D5ED /* XCTest.framework */; };
+		89CE3E6418B49A880096D5ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E3C18B49A880096D5ED /* Foundation.framework */; };
+		89CE3E6518B49A880096D5ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E4018B49A880096D5ED /* UIKit.framework */; };
+		89CE3E6D18B49A880096D5ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E6B18B49A880096D5ED /* InfoPlist.strings */; };
+		89CE3E6F18B49A880096D5ED /* Sky_DiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89CE3E6618B49A880096D5ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89CE3E3118B49A880096D5ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89CE3E3818B49A880096D5ED;
+			remoteInfo = "Sky Diver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		89CE3E3918B49A880096D5ED /* Sky Diver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sky Diver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CE3E3C18B49A880096D5ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		89CE3E3E18B49A880096D5ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		89CE3E4018B49A880096D5ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		89CE3E4218B49A880096D5ED /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		89CE3E4618B49A880096D5ED /* Sky Diver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sky Diver-Info.plist"; sourceTree = "<group>"; };
+		89CE3E4818B49A880096D5ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		89CE3E4A18B49A880096D5ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		89CE3E4C18B49A880096D5ED /* Sky Diver-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sky Diver-Prefix.pch"; sourceTree = "<group>"; };
+		89CE3E4D18B49A880096D5ED /* SFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAppDelegate.h; sourceTree = "<group>"; };
+		89CE3E4E18B49A880096D5ED /* SFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAppDelegate.m; sourceTree = "<group>"; };
+		89CE3E5118B49A880096D5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		89CE3E5318B49A880096D5ED /* SFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFViewController.h; sourceTree = "<group>"; };
+		89CE3E5418B49A880096D5ED /* SFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFViewController.m; sourceTree = "<group>"; };
+		89CE3E5618B49A880096D5ED /* SFMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFMyScene.h; sourceTree = "<group>"; };
+		89CE3E5718B49A880096D5ED /* SFMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFMyScene.m; sourceTree = "<group>"; };
+		89CE3E5918B49A880096D5ED /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		89CE3E5B18B49A880096D5ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		89CE3E6118B49A880096D5ED /* Sky DiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sky DiverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CE3E6218B49A880096D5ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		89CE3E6A18B49A880096D5ED /* Sky DiverTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sky DiverTests-Info.plist"; sourceTree = "<group>"; };
+		89CE3E6C18B49A880096D5ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sky_DiverTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89CE3E3618B49A880096D5ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CE3E3F18B49A880096D5ED /* CoreGraphics.framework in Frameworks */,
+				89CE3E4118B49A880096D5ED /* UIKit.framework in Frameworks */,
+				89CE3E4318B49A880096D5ED /* SpriteKit.framework in Frameworks */,
+				89CE3E3D18B49A880096D5ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89CE3E5E18B49A880096D5ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CE3E6318B49A880096D5ED /* XCTest.framework in Frameworks */,
+				89CE3E6518B49A880096D5ED /* UIKit.framework in Frameworks */,
+				89CE3E6418B49A880096D5ED /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89CE3E3018B49A880096D5ED = {
+			isa = PBXGroup;
+			children = (
+				89CE3E4418B49A880096D5ED /* Sky Diver */,
+				89CE3E6818B49A880096D5ED /* Sky DiverTests */,
+				89CE3E3B18B49A880096D5ED /* Frameworks */,
+				89CE3E3A18B49A880096D5ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		89CE3E3A18B49A880096D5ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				89CE3E3918B49A880096D5ED /* Sky Diver.app */,
+				89CE3E6118B49A880096D5ED /* Sky DiverTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89CE3E3B18B49A880096D5ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89CE3E3C18B49A880096D5ED /* Foundation.framework */,
+				89CE3E3E18B49A880096D5ED /* CoreGraphics.framework */,
+				89CE3E4018B49A880096D5ED /* UIKit.framework */,
+				89CE3E4218B49A880096D5ED /* SpriteKit.framework */,
+				89CE3E6218B49A880096D5ED /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89CE3E4418B49A880096D5ED /* Sky Diver */ = {
+			isa = PBXGroup;
+			children = (
+				89CE3E4D18B49A880096D5ED /* SFAppDelegate.h */,
+				89CE3E4E18B49A880096D5ED /* SFAppDelegate.m */,
+				89CE3E5018B49A880096D5ED /* Main.storyboard */,
+				89CE3E5318B49A880096D5ED /* SFViewController.h */,
+				89CE3E5418B49A880096D5ED /* SFViewController.m */,
+				89CE3E5618B49A880096D5ED /* SFMyScene.h */,
+				89CE3E5718B49A880096D5ED /* SFMyScene.m */,
+				89CE3E5918B49A880096D5ED /* Spaceship.png */,
+				89CE3E5B18B49A880096D5ED /* Images.xcassets */,
+				89CE3E4518B49A880096D5ED /* Supporting Files */,
+			);
+			path = "Sky Diver";
+			sourceTree = "<group>";
+		};
+		89CE3E4518B49A880096D5ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89CE3E4618B49A880096D5ED /* Sky Diver-Info.plist */,
+				89CE3E4718B49A880096D5ED /* InfoPlist.strings */,
+				89CE3E4A18B49A880096D5ED /* main.m */,
+				89CE3E4C18B49A880096D5ED /* Sky Diver-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89CE3E6818B49A880096D5ED /* Sky DiverTests */ = {
+			isa = PBXGroup;
+			children = (
+				89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */,
+				89CE3E6918B49A880096D5ED /* Supporting Files */,
+			);
+			path = "Sky DiverTests";
+			sourceTree = "<group>";
+		};
+		89CE3E6918B49A880096D5ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				89CE3E6A18B49A880096D5ED /* Sky DiverTests-Info.plist */,
+				89CE3E6B18B49A880096D5ED /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		89CE3E3818B49A880096D5ED /* Sky Diver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89CE3E7218B49A880096D5ED /* Build configuration list for PBXNativeTarget "Sky Diver" */;
+			buildPhases = (
+				89CE3E3518B49A880096D5ED /* Sources */,
+				89CE3E3618B49A880096D5ED /* Frameworks */,
+				89CE3E3718B49A880096D5ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sky Diver";
+			productName = "Sky Diver";
+			productReference = 89CE3E3918B49A880096D5ED /* Sky Diver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		89CE3E6018B49A880096D5ED /* Sky DiverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89CE3E7518B49A880096D5ED /* Build configuration list for PBXNativeTarget "Sky DiverTests" */;
+			buildPhases = (
+				89CE3E5D18B49A880096D5ED /* Sources */,
+				89CE3E5E18B49A880096D5ED /* Frameworks */,
+				89CE3E5F18B49A880096D5ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89CE3E6718B49A880096D5ED /* PBXTargetDependency */,
+			);
+			name = "Sky DiverTests";
+			productName = "Sky DiverTests";
+			productReference = 89CE3E6118B49A880096D5ED /* Sky DiverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		89CE3E3118B49A880096D5ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SF;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Spencer Fornaciari";
+				TargetAttributes = {
+					89CE3E6018B49A880096D5ED = {
+						TestTargetID = 89CE3E3818B49A880096D5ED;
+					};
+				};
+			};
+			buildConfigurationList = 89CE3E3418B49A880096D5ED /* Build configuration list for PBXProject "Sky Diver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 89CE3E3018B49A880096D5ED;
+			productRefGroup = 89CE3E3A18B49A880096D5ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				89CE3E3818B49A880096D5ED /* Sky Diver */,
+				89CE3E6018B49A880096D5ED /* Sky DiverTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		89CE3E3718B49A880096D5ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CE3E4918B49A880096D5ED /* InfoPlist.strings in Resources */,
+				89CE3E5C18B49A880096D5ED /* Images.xcassets in Resources */,
+				89CE3E5A18B49A880096D5ED /* Spaceship.png in Resources */,
+				89CE3E5218B49A880096D5ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89CE3E5F18B49A880096D5ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CE3E6D18B49A880096D5ED /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		89CE3E3518B49A880096D5ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CE3E4B18B49A880096D5ED /* main.m in Sources */,
+				89CE3E5518B49A880096D5ED /* SFViewController.m in Sources */,
+				89CE3E4F18B49A880096D5ED /* SFAppDelegate.m in Sources */,
+				89CE3E5818B49A880096D5ED /* SFMyScene.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89CE3E5D18B49A880096D5ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CE3E6F18B49A880096D5ED /* Sky_DiverTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89CE3E6718B49A880096D5ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89CE3E3818B49A880096D5ED /* Sky Diver */;
+			targetProxy = 89CE3E6618B49A880096D5ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		89CE3E4718B49A880096D5ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89CE3E4818B49A880096D5ED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		89CE3E5018B49A880096D5ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89CE3E5118B49A880096D5ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		89CE3E6B18B49A880096D5ED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				89CE3E6C18B49A880096D5ED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		89CE3E7018B49A880096D5ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		89CE3E7118B49A880096D5ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		89CE3E7318B49A880096D5ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sky Diver/Sky Diver-Prefix.pch";
+				INFOPLIST_FILE = "Sky Diver/Sky Diver-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		89CE3E7418B49A880096D5ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sky Diver/Sky Diver-Prefix.pch";
+				INFOPLIST_FILE = "Sky Diver/Sky Diver-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		89CE3E7618B49A880096D5ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sky Diver.app/Sky Diver";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sky Diver/Sky Diver-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sky DiverTests/Sky DiverTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		89CE3E7718B49A880096D5ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sky Diver.app/Sky Diver";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sky Diver/Sky Diver-Prefix.pch";
+				INFOPLIST_FILE = "Sky DiverTests/Sky DiverTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		89CE3E3418B49A880096D5ED /* Build configuration list for PBXProject "Sky Diver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CE3E7018B49A880096D5ED /* Debug */,
+				89CE3E7118B49A880096D5ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89CE3E7218B49A880096D5ED /* Build configuration list for PBXNativeTarget "Sky Diver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CE3E7318B49A880096D5ED /* Debug */,
+				89CE3E7418B49A880096D5ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		89CE3E7518B49A880096D5ED /* Build configuration list for PBXNativeTarget "Sky DiverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89CE3E7618B49A880096D5ED /* Debug */,
+				89CE3E7718B49A880096D5ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 89CE3E3118B49A880096D5ED /* Project object */;
+}
