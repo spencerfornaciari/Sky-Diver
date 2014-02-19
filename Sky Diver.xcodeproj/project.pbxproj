@@ -17,7 +17,6 @@
 		89CE3E5218B49A880096D5ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E5018B49A880096D5ED /* Main.storyboard */; };
 		89CE3E5518B49A880096D5ED /* SFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3E5418B49A880096D5ED /* SFViewController.m */; };
 		89CE3E5818B49A880096D5ED /* SFMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3E5718B49A880096D5ED /* SFMyScene.m */; };
-		89CE3E5A18B49A880096D5ED /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E5918B49A880096D5ED /* Spaceship.png */; };
 		89CE3E5C18B49A880096D5ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E5B18B49A880096D5ED /* Images.xcassets */; };
 		89CE3E6318B49A880096D5ED /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E6218B49A880096D5ED /* XCTest.framework */; };
 		89CE3E6418B49A880096D5ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E3C18B49A880096D5ED /* Foundation.framework */; };
@@ -25,6 +24,7 @@
 		89CE3E6D18B49A880096D5ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E6B18B49A880096D5ED /* InfoPlist.strings */; };
 		89CE3E6F18B49A880096D5ED /* Sky_DiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */; };
 		89CE3E7918B49A9E0096D5ED /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E7818B49A9E0096D5ED /* background.png */; };
+		89CE3E7D18B49CF00096D5ED /* diver.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E7C18B49CF00096D5ED /* diver.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		89CE3E5418B49A880096D5ED /* SFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFViewController.m; sourceTree = "<group>"; };
 		89CE3E5618B49A880096D5ED /* SFMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFMyScene.h; sourceTree = "<group>"; };
 		89CE3E5718B49A880096D5ED /* SFMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFMyScene.m; sourceTree = "<group>"; };
-		89CE3E5918B49A880096D5ED /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		89CE3E5B18B49A880096D5ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89CE3E6118B49A880096D5ED /* Sky DiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sky DiverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CE3E6218B49A880096D5ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -62,6 +61,7 @@
 		89CE3E6C18B49A880096D5ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sky_DiverTests.m; sourceTree = "<group>"; };
 		89CE3E7818B49A9E0096D5ED /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		89CE3E7C18B49CF00096D5ED /* diver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diver.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +123,7 @@
 		89CE3E4418B49A880096D5ED /* Sky Diver */ = {
 			isa = PBXGroup;
 			children = (
+				89CE3E7C18B49CF00096D5ED /* diver.png */,
 				89CE3E7818B49A9E0096D5ED /* background.png */,
 				89CE3E4D18B49A880096D5ED /* SFAppDelegate.h */,
 				89CE3E4E18B49A880096D5ED /* SFAppDelegate.m */,
@@ -131,7 +132,6 @@
 				89CE3E5418B49A880096D5ED /* SFViewController.m */,
 				89CE3E5618B49A880096D5ED /* SFMyScene.h */,
 				89CE3E5718B49A880096D5ED /* SFMyScene.m */,
-				89CE3E5918B49A880096D5ED /* Spaceship.png */,
 				89CE3E5B18B49A880096D5ED /* Images.xcassets */,
 				89CE3E4518B49A880096D5ED /* Supporting Files */,
 			);
@@ -247,7 +247,7 @@
 				89CE3E4918B49A880096D5ED /* InfoPlist.strings in Resources */,
 				89CE3E7918B49A9E0096D5ED /* background.png in Resources */,
 				89CE3E5C18B49A880096D5ED /* Images.xcassets in Resources */,
-				89CE3E5A18B49A880096D5ED /* Spaceship.png in Resources */,
+				89CE3E7D18B49CF00096D5ED /* diver.png in Resources */,
 				89CE3E5218B49A880096D5ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
