@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8973C2ED18B5BF830052346A /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 8973C2EB18B5BF830052346A /* cloud.png */; };
+		8973C2EE18B5BF830052346A /* hawk.png in Resources */ = {isa = PBXBuildFile; fileRef = 8973C2EC18B5BF830052346A /* hawk.png */; };
 		89BF8D5A18B590AA009DE7DC /* skybackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 89BF8D5918B590AA009DE7DC /* skybackground.png */; };
 		89BF8D5C18B59532009DE7DC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BF8D5B18B59532009DE7DC /* CoreMotion.framework */; };
 		89CE3E3D18B49A880096D5ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E3C18B49A880096D5ED /* Foundation.framework */; };
@@ -25,7 +27,6 @@
 		89CE3E6518B49A880096D5ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E4018B49A880096D5ED /* UIKit.framework */; };
 		89CE3E6D18B49A880096D5ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E6B18B49A880096D5ED /* InfoPlist.strings */; };
 		89CE3E6F18B49A880096D5ED /* Sky_DiverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */; };
-		89CE3E7918B49A9E0096D5ED /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E7818B49A9E0096D5ED /* background.png */; };
 		89CE3E7D18B49CF00096D5ED /* diver.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CE3E7C18B49CF00096D5ED /* diver.png */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		89BF8D5918B590AA009DE7DC /* skybackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skybackground.png; sourceTree = "<group>"; };
+		8973C2EB18B5BF830052346A /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		8973C2EC18B5BF830052346A /* hawk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hawk.png; sourceTree = "<group>"; };
+		89BF8D5918B590AA009DE7DC /* skybackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybackground.png; path = "Sky Diver/skybackground.png"; sourceTree = "<group>"; };
 		89BF8D5B18B59532009DE7DC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		89CE3E3918B49A880096D5ED /* Sky Diver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sky Diver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CE3E3C18B49A880096D5ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,8 +67,7 @@
 		89CE3E6A18B49A880096D5ED /* Sky DiverTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sky DiverTests-Info.plist"; sourceTree = "<group>"; };
 		89CE3E6C18B49A880096D5ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sky_DiverTests.m; sourceTree = "<group>"; };
-		89CE3E7818B49A9E0096D5ED /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		89CE3E7C18B49CF00096D5ED /* diver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = diver.png; sourceTree = "<group>"; };
+		89CE3E7C18B49CF00096D5ED /* diver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = diver.png; path = "Sky Diver/diver.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +96,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8973C2EA18B5BF6E0052346A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				89BF8D5918B590AA009DE7DC /* skybackground.png */,
+				89CE3E7C18B49CF00096D5ED /* diver.png */,
+				8973C2EB18B5BF830052346A /* cloud.png */,
+				8973C2EC18B5BF830052346A /* hawk.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		89CE3E3018B49A880096D5ED = {
 			isa = PBXGroup;
 			children = (
+				8973C2EA18B5BF6E0052346A /* Images */,
 				89CE3E4418B49A880096D5ED /* Sky Diver */,
 				89CE3E6818B49A880096D5ED /* Sky DiverTests */,
 				89CE3E3B18B49A880096D5ED /* Frameworks */,
@@ -129,9 +143,6 @@
 		89CE3E4418B49A880096D5ED /* Sky Diver */ = {
 			isa = PBXGroup;
 			children = (
-				89BF8D5918B590AA009DE7DC /* skybackground.png */,
-				89CE3E7C18B49CF00096D5ED /* diver.png */,
-				89CE3E7818B49A9E0096D5ED /* background.png */,
 				89CE3E4D18B49A880096D5ED /* SFAppDelegate.h */,
 				89CE3E4E18B49A880096D5ED /* SFAppDelegate.m */,
 				89CE3E5018B49A880096D5ED /* Main.storyboard */,
@@ -252,7 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				89CE3E4918B49A880096D5ED /* InfoPlist.strings in Resources */,
-				89CE3E7918B49A9E0096D5ED /* background.png in Resources */,
+				8973C2EE18B5BF830052346A /* hawk.png in Resources */,
+				8973C2ED18B5BF830052346A /* cloud.png in Resources */,
 				89CE3E5C18B49A880096D5ED /* Images.xcassets in Resources */,
 				89BF8D5A18B590AA009DE7DC /* skybackground.png in Resources */,
 				89CE3E7D18B49CF00096D5ED /* diver.png in Resources */,
