@@ -7,6 +7,7 @@
 //
 
 #import "SFMyScene.h"
+@import CoreMotion;
 
 static const uint32_t skydiver = 0x1 << 0;
 static const uint32_t eagle = 0x1 << 1;
@@ -17,6 +18,9 @@ static const uint32_t pigeon = 0x1 << 2;
 @property (strong, nonatomic) SKSpriteNode *mainCharacter;
 @property (nonatomic) int time;
 
+@property (strong, nonatomic) CMMotionManager *motionManager;
+@property (strong, nonatomic) CMAccelerometerData *accelerometerData;
+
 @end
 
 @implementation SFMyScene
@@ -25,17 +29,40 @@ static const uint32_t pigeon = 0x1 << 2;
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
+        self.motionManager = [[CMMotionManager alloc] init];
+        
+        if (self.motionManager) {
+            [self.motionManager startAccelerometerUpdates];
+        }
+        self.accelerometerData = [CMAccelerometerData new];
+        
+        self.accelerometerData = self.motionManager.accelerometerData;
+        
+        
         self.physicsWorld.contactDelegate = self;
         
+//        for (int i = 0; i < 2; i++) {
+//            SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"skybackground"];
+//            background.name = @"background";
+//            background.anchorPoint = CGPointZero;
+//            background.position = CGPointMake(0, i * self.frame.size.height);
+//            NSLog(@"%f, ", background.size.height);
+//            NSLog(@"%f, %f", background.position.x, background.position.y);
+//            background.size = self.size;
+//            
+//            [self addChild:background];
+//            
+//        }
+        
         for (int i = 0; i < 2; i++) {
-            SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"background"];
-            background.name = @"background";
-            background.anchorPoint = CGPointZero;
-            background.position = CGPointMake(0, i * background.size.height);
-            background.size = self.size;
+            SKSpriteNode *bg = [SKSpriteNode spriteNodeWithImageNamed:@"skybackground.png"];
+            bg.anchorPoint = CGPointZero;
+            bg.size = self.size;
+            bg.position = CGPointMake( 0, i * bg.size.height);
+            NSLog(@"%f", bg.size.height);
+            bg.name = @"background";
             
-            [self addChild:background];
-            
+            [self addChild:bg];
         }
         
         self.mainCharacter = [[SKSpriteNode alloc] initWithImageNamed:@"diver"];
@@ -64,21 +91,35 @@ static const uint32_t pigeon = 0x1 << 2;
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
-    [self enumerateChildNodesWithName:@"background" usingBlock:^(SKNode *node, BOOL *stop) {
-        SKSpriteNode *background = (SKSpriteNode *)node;
-        background.position = CGPointMake(background.position.x, background.position.y + 5);
-        
-        if (background.position.y <= -background.size.height) {
-            background.position = CGPointMake(background.position.x, background.position.y + background.size.height * 2);
-
-        }
+//    [self enumerateChildNodesWithName:@"background" usingBlock:^(SKNode *node, BOOL *stop) {
+//        SKSpriteNode *background = (SKSpriteNode *)node;
+//        background.position = CGPointMake(background.position.x, background.position.y + 5);
+//        
+//        if (background.position.y <= -background.size.height) {
+//            background.position = CGPointMake(background.position.x, background.position.y + background.size.height * 2);
+//
+//        }
+    
+        [self enumerateChildNodesWithName:@"background" usingBlock:^(SKNode *node, BOOL *stop) {
+            SKSpriteNode * bg = (SKSpriteNode *)node;
+            bg.position = CGPointMake(bg.position.x, bg.position.y + 5);
+            
+            if (bg.position.y <= -bg.size.height) {
+                bg.position = CGPointMake(bg.position.x, bg.position.y + bg.size.height * 2);
+            }
+        }];
         
 //        bg.position = CGPointMake(bg.position.x - 5, bg.position.y);
 //        
 //        if (bg.position.y <= -bg.size.width) {
 //            bg.position = CGPointMake(bg.position.x + bg.size.width * 2, bg.position.y);
 //        }
-    }];
+   // }];
+    self.accelerometerData = self.motionManager.accelerometerData;
+    
+    NSLog(@"%f", self.accelerometerData.acceleration.x);
+    
+    self.mainCharacter.position = CGPointMake(self.mainCharacter.position.x + self.accelerometerData.acceleration.x * 20, self.mainCharacter.position.y);
 }
 
 @end

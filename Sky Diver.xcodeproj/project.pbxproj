@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89BF8D5A18B590AA009DE7DC /* skybackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 89BF8D5918B590AA009DE7DC /* skybackground.png */; };
+		89BF8D5C18B59532009DE7DC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BF8D5B18B59532009DE7DC /* CoreMotion.framework */; };
 		89CE3E3D18B49A880096D5ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E3C18B49A880096D5ED /* Foundation.framework */; };
 		89CE3E3F18B49A880096D5ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E3E18B49A880096D5ED /* CoreGraphics.framework */; };
 		89CE3E4118B49A880096D5ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E4018B49A880096D5ED /* UIKit.framework */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89BF8D5918B590AA009DE7DC /* skybackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skybackground.png; sourceTree = "<group>"; };
+		89BF8D5B18B59532009DE7DC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		89CE3E3918B49A880096D5ED /* Sky Diver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sky Diver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CE3E3C18B49A880096D5ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89CE3E3E18B49A880096D5ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89BF8D5C18B59532009DE7DC /* CoreMotion.framework in Frameworks */,
 				89CE3E3F18B49A880096D5ED /* CoreGraphics.framework in Frameworks */,
 				89CE3E4118B49A880096D5ED /* UIKit.framework in Frameworks */,
 				89CE3E4318B49A880096D5ED /* SpriteKit.framework in Frameworks */,
@@ -111,6 +116,7 @@
 		89CE3E3B18B49A880096D5ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				89BF8D5B18B59532009DE7DC /* CoreMotion.framework */,
 				89CE3E3C18B49A880096D5ED /* Foundation.framework */,
 				89CE3E3E18B49A880096D5ED /* CoreGraphics.framework */,
 				89CE3E4018B49A880096D5ED /* UIKit.framework */,
@@ -123,6 +129,7 @@
 		89CE3E4418B49A880096D5ED /* Sky Diver */ = {
 			isa = PBXGroup;
 			children = (
+				89BF8D5918B590AA009DE7DC /* skybackground.png */,
 				89CE3E7C18B49CF00096D5ED /* diver.png */,
 				89CE3E7818B49A9E0096D5ED /* background.png */,
 				89CE3E4D18B49A880096D5ED /* SFAppDelegate.h */,
@@ -247,6 +254,7 @@
 				89CE3E4918B49A880096D5ED /* InfoPlist.strings in Resources */,
 				89CE3E7918B49A9E0096D5ED /* background.png in Resources */,
 				89CE3E5C18B49A880096D5ED /* Images.xcassets in Resources */,
+				89BF8D5A18B590AA009DE7DC /* skybackground.png in Resources */,
 				89CE3E7D18B49CF00096D5ED /* diver.png in Resources */,
 				89CE3E5218B49A880096D5ED /* Main.storyboard in Resources */,
 			);
@@ -481,6 +489,7 @@
 				89CE3E7418B49A880096D5ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89CE3E7518B49A880096D5ED /* Build configuration list for PBXNativeTarget "Sky DiverTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +498,7 @@
 				89CE3E7718B49A880096D5ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
