@@ -157,8 +157,8 @@ static const uint32_t cloudCategory = 0x1 << 2;
             bg.position = CGPointMake(bg.position.x, bg.position.y + 2);
             NSLog(@"Position: %f", bg.position.y);
 
-            if (bg.position.y <= -bg.size.height) {
-                bg.position = CGPointMake(bg.position.x, -bg.position.y - bg.size.height * 2);
+            if (bg.position.y >= bg.size.height) {
+                bg.position = CGPointMake(bg.position.x, -bg.size.height * 2 + bg.position.y);
                 NSLog(@"Offset: %f", bg.position.y);
             }
         }];
@@ -265,7 +265,7 @@ static const uint32_t cloudCategory = 0x1 << 2;
     
     //NSLog(@"%f", self.accelerometerData.acceleration.x);
     
-    self.mainCharacter.position = CGPointMake(self.mainCharacter.position.x + self.accelerometerData.acceleration.x * 20, self.mainCharacter.position.y + self.accelerometerData.acceleration.y);
+    self.mainCharacter.position = CGPointMake(self.mainCharacter.position.x + self.accelerometerData.acceleration.x * 20, self.mainCharacter.position.y + self.accelerometerData.acceleration.y * 5);
 }
 
 #pragma mark - Random Number method
