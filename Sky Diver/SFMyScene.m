@@ -51,7 +51,7 @@ static const uint32_t cloudCategory = 0x1 << 2;
         
         self.accelerometerData = self.motionManager.accelerometerData;
         
-        
+        self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         self.physicsWorld.contactDelegate = self;
         
 //        for (int i = 0; i < 2; i++) {
@@ -79,10 +79,10 @@ static const uint32_t cloudCategory = 0x1 << 2;
         
         self.mainCharacter = [[SKSpriteNode alloc] initWithImageNamed:@"diver"];
         self.mainCharacter.name = @"skydiver";
-        self.mainCharacter.position = CGPointMake(150, 450);
-        //self.mainCharacter.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.mainCharacter.size];
+        self.mainCharacter.position = CGPointMake(150, 420);
+        self.mainCharacter.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.mainCharacter.size];
         //self.mainCharacter.physicsBody.dynamic = YES;
-        //self.mainCharacter.physicsBody.affectedByGravity = YES;
+        self.mainCharacter.physicsBody.affectedByGravity = NO;
         //self.mainCharacter.physicsBody.mass = 0.02;
         self.mainCharacter.physicsBody.categoryBitMask = skydiverCategory;
         self.mainCharacter.physicsBody.collisionBitMask = hawkCategory;
@@ -117,7 +117,8 @@ static const uint32_t cloudCategory = 0x1 << 2;
             cloud.hidden = YES;
             cloud.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:cloud.size];
             cloud.physicsBody.categoryBitMask = cloudCategory;
-            //cloud.physicsBody.collisionBitMask = skydiverCategory;
+            cloud.physicsBody.collisionBitMask = 0;
+            cloud.physicsBody.contactTestBitMask = skydiverCategory;
             cloud.physicsBody.dynamic = NO;
             [self.cloudArray addObject:cloud];
             
@@ -138,9 +139,6 @@ static const uint32_t cloudCategory = 0x1 << 2;
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
-    self.mainCharacter.physicsBody.velocity = CGVectorMake(0, 0);
-    [self.mainCharacter.physicsBody applyImpulse:CGVectorMake(0, 7)];
-    
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -153,16 +151,18 @@ static const uint32_t cloudCategory = 0x1 << 2;
 //            background.position = CGPointMake(background.position.x, background.position.y + background.size.height * 2);
 //
 //        }
-    
+        //Works up but not down
         [self enumerateChildNodesWithName:@"background" usingBlock:^(SKNode *node, BOOL *stop) {
             SKSpriteNode * bg = (SKSpriteNode *)node;
-            bg.position = CGPointMake(bg.position.x, bg.position.y + 5);
-            
+            bg.position = CGPointMake(bg.position.x, bg.position.y + 2);
+            NSLog(@"Position: %f", bg.position.y);
+
             if (bg.position.y <= -bg.size.height) {
-                bg.position = CGPointMake(bg.position.x, bg.position.y + bg.size.height * 2);
+                bg.position = CGPointMake(bg.position.x, -bg.position.y - bg.size.height * 2);
+                NSLog(@"Offset: %f", bg.position.y);
             }
         }];
-        
+    
 //        bg.position = CGPointMake(bg.position.x - 5, bg.position.y);
 //        
 //        if (bg.position.y <= -bg.size.width) {
@@ -265,7 +265,7 @@ static const uint32_t cloudCategory = 0x1 << 2;
     
     //NSLog(@"%f", self.accelerometerData.acceleration.x);
     
-    self.mainCharacter.position = CGPointMake(self.mainCharacter.position.x + self.accelerometerData.acceleration.x * 20, self.mainCharacter.position.y);
+    self.mainCharacter.position = CGPointMake(self.mainCharacter.position.x + self.accelerometerData.acceleration.x * 20, self.mainCharacter.position.y + self.accelerometerData.acceleration.y);
 }
 
 #pragma mark - Random Number method
@@ -273,6 +273,11 @@ static const uint32_t cloudCategory = 0x1 << 2;
 -(float)randomValueBetween:(float)low andValue:(float)high
 {
     return (((float) arc4random() / 0xFFFFFFFFu) * (high - low)) + low;
+}
+
+-(void)didBeginContact:(SKPhysicsContact *)contact
+{
+    NSLog(@"Contact");
 }
 
 @end
