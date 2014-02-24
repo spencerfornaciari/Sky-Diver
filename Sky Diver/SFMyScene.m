@@ -93,13 +93,13 @@ typedef enum : uint32_t {
         self.mainCharacter.name = @"skydiver";
         self.mainCharacter.position = CGPointMake(150, 420);
         self.mainCharacter.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.mainCharacter.size];
-        self.mainCharacter.physicsBody.dynamic = NO;
+//        self.mainCharacter.physicsBody.dynamic = NO;
         self.mainCharacter.physicsBody.allowsRotation = NO;
         self.mainCharacter.physicsBody.affectedByGravity = NO;
         //self.mainCharacter.physicsBody.mass = 0.02;
         self.mainCharacter.physicsBody.categoryBitMask = skyDiverCategory;
         self.mainCharacter.physicsBody.collisionBitMask = hawkCategory;
-        self.mainCharacter.physicsBody.contactTestBitMask = cloudCategory;
+        self.mainCharacter.physicsBody.contactTestBitMask = cloudCategory | hawkCategory;
         
         [self addChild:self.mainCharacter];
         
@@ -190,18 +190,16 @@ typedef enum : uint32_t {
 //    NSLog(@"%f", _internalClock);
     if (_internalClock == (int)curTime) {
         _gameTime++;
+        
+        if (_gameTime % 15 == 0) {
+            _lives++;
+        }
         _internalClock++;
         self.timeLabel.text = [NSString stringWithFormat:@"Time: %d", _gameTime];
     }
     
-    if (_gameTime % 15 == 0) {
-        NSLog(@"ADDED A LIFE!");
-        _lives++;
-        self.lifeLabel.text = [NSString stringWithFormat:@"Lives: %d", _lives];
-
-    }
+    self.lifeLabel.text = [NSString stringWithFormat:@"Lives: %d", _lives];
     
-//    NSLog(@"%f",);
     
     if (curTime > _nextHawkSpawn) {
         float randSeconds = [self randomValueBetween:0.20f andValue:1.0f];
@@ -309,6 +307,13 @@ typedef enum : uint32_t {
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {
     //NSLog(@"Contact");
+    
+    if (contact.bodyA.categoryBitMask == skyDiverCategory && contact.bodyB.categoryBitMask == hawkCategory) {
+        NSLog(@"Ouch!");
+        _lives--;
+    } else {
+        NSLog(@"No Problemo!");
+    }
 }
 
 @end
