@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8973C2ED18B5BF830052346A /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 8973C2EB18B5BF830052346A /* cloud.png */; };
 		8973C2EE18B5BF830052346A /* hawk.png in Resources */ = {isa = PBXBuildFile; fileRef = 8973C2EC18B5BF830052346A /* hawk.png */; };
+		8973C2F118B7BFC60052346A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8973C2F018B7BFC60052346A /* Constants.m */; };
 		89BF8D5A18B590AA009DE7DC /* skybackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 89BF8D5918B590AA009DE7DC /* skybackground.png */; };
 		89BF8D5C18B59532009DE7DC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BF8D5B18B59532009DE7DC /* CoreMotion.framework */; };
 		89CE3E3D18B49A880096D5ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E3C18B49A880096D5ED /* Foundation.framework */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		8973C2EB18B5BF830052346A /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
 		8973C2EC18B5BF830052346A /* hawk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hawk.png; sourceTree = "<group>"; };
+		8973C2EF18B7BFC60052346A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8973C2F018B7BFC60052346A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		89BF8D5918B590AA009DE7DC /* skybackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybackground.png; path = "Sky Diver/skybackground.png"; sourceTree = "<group>"; };
 		89BF8D5B18B59532009DE7DC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		89CE3E3918B49A880096D5ED /* Sky Diver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sky Diver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +153,8 @@
 				89CE3E5418B49A880096D5ED /* SFViewController.m */,
 				89CE3E5618B49A880096D5ED /* SFMyScene.h */,
 				89CE3E5718B49A880096D5ED /* SFMyScene.m */,
+				8973C2EF18B7BFC60052346A /* Constants.h */,
+				8973C2F018B7BFC60052346A /* Constants.m */,
 				89CE3E5B18B49A880096D5ED /* Images.xcassets */,
 				89CE3E4518B49A880096D5ED /* Supporting Files */,
 			);
@@ -287,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8973C2F118B7BFC60052346A /* Constants.m in Sources */,
 				89CE3E4B18B49A880096D5ED /* main.m in Sources */,
 				89CE3E5518B49A880096D5ED /* SFViewController.m in Sources */,
 				89CE3E4F18B49A880096D5ED /* SFAppDelegate.m in Sources */,

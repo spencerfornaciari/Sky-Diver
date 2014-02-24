@@ -13,9 +13,15 @@
 #define NUM_OF_CLOUDS 10
 #define MULTIPLIER_FOR_DIRECTION 1
 
-static const uint32_t skydiverCategory = 0x1 << 0;
-static const uint32_t hawkCategory = 0x1 << 1;
-static const uint32_t cloudCategory = 0x1 << 2;
+typedef enum : uint32_t {
+    skyDiverCategory = 0x1 << 0,
+    hawkCategory = 0x1 << 1,
+    cloudCategory = 0x1 << 2
+} SkyDiverTypes;
+
+//static const uint32_t skydiverCategory = 0x1 << 0;
+//static const uint32_t hawkCategory = 0x1 << 1;
+//static const uint32_t cloudCategory = 0x1 << 2;
 
 @interface SFMyScene ()
 {
@@ -24,9 +30,11 @@ static const uint32_t cloudCategory = 0x1 << 2;
 }
 
 @property (strong, nonatomic) SKSpriteNode *mainCharacter;
+@property (nonatomic) SKLabelNode *timeLabel, *lifeLabel;
+
 @property (strong, nonatomic) NSMutableArray *hawkArray;
 @property (strong, nonatomic) NSMutableArray *cloudArray;
-@property (nonatomic) int time;
+@property (nonatomic) int time, gameTime, internalClock, lives;
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 @property (strong, nonatomic) CMAccelerometerData *accelerometerData;
@@ -54,18 +62,22 @@ static const uint32_t cloudCategory = 0x1 << 2;
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         self.physicsWorld.contactDelegate = self;
         
-//        for (int i = 0; i < 2; i++) {
-//            SKSpriteNode *background = [SKSpriteNode spriteNodeWithImageNamed:@"skybackground"];
-//            background.name = @"background";
-//            background.anchorPoint = CGPointZero;
-//            background.position = CGPointMake(0, i * self.frame.size.height);
-//            NSLog(@"%f, ", background.size.height);
-//            NSLog(@"%f, %f", background.position.x, background.position.y);
-//            background.size = self.size;
-//            
-//            [self addChild:background];
-//            
-//        }
+        
+        _gameTime = 0;
+        _internalClock = 0;
+        _lives = 1;
+        self.timeLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica-CondensedMedium"];
+        self.timeLabel.text = [NSString stringWithFormat:@"Time: %d", _gameTime];
+        self.timeLabel.fontColor = [UIColor blackColor];
+        self.timeLabel.fontSize = 20;
+        self.timeLabel.position = CGPointMake(50, 20);
+        
+        self.lifeLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica-Neue"];
+        self.lifeLabel.text = [NSString stringWithFormat:@"Lives: %d", _lives];
+        self.lifeLabel.fontColor = [UIColor blackColor];
+        self.lifeLabel.fontSize = 20;
+        self.lifeLabel.position = CGPointMake(50, 50);
+        
         
         for (int i = 0; i < 2; i++) {
             SKSpriteNode *bg = [SKSpriteNode spriteNodeWithImageNamed:@"skybackground.png"];
@@ -81,10 +93,11 @@ static const uint32_t cloudCategory = 0x1 << 2;
         self.mainCharacter.name = @"skydiver";
         self.mainCharacter.position = CGPointMake(150, 420);
         self.mainCharacter.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.mainCharacter.size];
-        //self.mainCharacter.physicsBody.dynamic = YES;
+        self.mainCharacter.physicsBody.dynamic = NO;
+        self.mainCharacter.physicsBody.allowsRotation = NO;
         self.mainCharacter.physicsBody.affectedByGravity = NO;
         //self.mainCharacter.physicsBody.mass = 0.02;
-        self.mainCharacter.physicsBody.categoryBitMask = skydiverCategory;
+        self.mainCharacter.physicsBody.categoryBitMask = skyDiverCategory;
         self.mainCharacter.physicsBody.collisionBitMask = hawkCategory;
         self.mainCharacter.physicsBody.contactTestBitMask = cloudCategory;
         
@@ -97,7 +110,7 @@ static const uint32_t cloudCategory = 0x1 << 2;
             hawk.hidden = YES;
             hawk.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:hawk.size];
             hawk.physicsBody.categoryBitMask = hawkCategory;
-            hawk.physicsBody.collisionBitMask = skydiverCategory;
+            hawk.physicsBody.collisionBitMask = skyDiverCategory;
             hawk.physicsBody.dynamic = NO;
             [self.hawkArray addObject:hawk];
             
@@ -118,7 +131,7 @@ static const uint32_t cloudCategory = 0x1 << 2;
             cloud.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:cloud.size];
             cloud.physicsBody.categoryBitMask = cloudCategory;
             cloud.physicsBody.collisionBitMask = 0;
-            cloud.physicsBody.contactTestBitMask = skydiverCategory;
+            cloud.physicsBody.contactTestBitMask = skyDiverCategory;
             cloud.physicsBody.dynamic = NO;
             [self.cloudArray addObject:cloud];
             
@@ -130,8 +143,9 @@ static const uint32_t cloudCategory = 0x1 << 2;
             
             [self addChild:cloud];
         }
-        
-        
+        [self addChild:self.timeLabel];
+        [self addChild:self.lifeLabel];
+        _internalClock = (int)CACurrentMediaTime() + 1;
     }
     return self;
 }
@@ -155,11 +169,11 @@ static const uint32_t cloudCategory = 0x1 << 2;
         [self enumerateChildNodesWithName:@"background" usingBlock:^(SKNode *node, BOOL *stop) {
             SKSpriteNode * bg = (SKSpriteNode *)node;
             bg.position = CGPointMake(bg.position.x, bg.position.y + 2);
-            NSLog(@"Position: %f", bg.position.y);
+            //NSLog(@"Position: %f", bg.position.y);
 
             if (bg.position.y >= bg.size.height) {
                 bg.position = CGPointMake(bg.position.x, -bg.size.height * 2 + bg.position.y);
-                NSLog(@"Offset: %f", bg.position.y);
+                //NSLog(@"Offset: %f", bg.position.y);
             }
         }];
     
@@ -170,7 +184,24 @@ static const uint32_t cloudCategory = 0x1 << 2;
 //        }
    // }];
     
+    
     double curTime = CACurrentMediaTime();
+//    NSLog(@"%f", curTime);
+//    NSLog(@"%f", _internalClock);
+    if (_internalClock == (int)curTime) {
+        _gameTime++;
+        _internalClock++;
+        self.timeLabel.text = [NSString stringWithFormat:@"Time: %d", _gameTime];
+    }
+    
+    if (_gameTime % 15 == 0) {
+        NSLog(@"ADDED A LIFE!");
+        _lives++;
+        self.lifeLabel.text = [NSString stringWithFormat:@"Lives: %d", _lives];
+
+    }
+    
+//    NSLog(@"%f",);
     
     if (curTime > _nextHawkSpawn) {
         float randSeconds = [self randomValueBetween:0.20f andValue:1.0f];
@@ -265,7 +296,7 @@ static const uint32_t cloudCategory = 0x1 << 2;
     
     //NSLog(@"%f", self.accelerometerData.acceleration.x);
     
-    self.mainCharacter.position = CGPointMake(self.mainCharacter.position.x + self.accelerometerData.acceleration.x * 20, self.mainCharacter.position.y + self.accelerometerData.acceleration.y * 5);
+    self.mainCharacter.position = CGPointMake(self.mainCharacter.position.x + self.accelerometerData.acceleration.x * 10, self.mainCharacter.position.y + self.accelerometerData.acceleration.y * 2);
 }
 
 #pragma mark - Random Number method
@@ -277,7 +308,7 @@ static const uint32_t cloudCategory = 0x1 << 2;
 
 -(void)didBeginContact:(SKPhysicsContact *)contact
 {
-    NSLog(@"Contact");
+    //NSLog(@"Contact");
 }
 
 @end
