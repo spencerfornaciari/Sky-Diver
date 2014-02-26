@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		894C26B218BC7EDE0066ADB5 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894C26B118BC7EDE0066ADB5 /* GameKit.framework */; };
-		894C26B418BC85440066ADB5 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 894C26B318BC85440066ADB5 /* coin.png */; };
 		8973C2ED18B5BF830052346A /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 8973C2EB18B5BF830052346A /* cloud.png */; };
 		8973C2EE18B5BF830052346A /* hawk.png in Resources */ = {isa = PBXBuildFile; fileRef = 8973C2EC18B5BF830052346A /* hawk.png */; };
 		8973C2F118B7BFC60052346A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8973C2F018B7BFC60052346A /* Constants.m */; };
 		89BF8D5A18B590AA009DE7DC /* skybackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 89BF8D5918B590AA009DE7DC /* skybackground.png */; };
 		89BF8D5C18B59532009DE7DC /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BF8D5B18B59532009DE7DC /* CoreMotion.framework */; };
+		89CC1FAF18BDD662001D7BD6 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 89CC1FAE18BDD662001D7BD6 /* coin.png */; };
 		89CE3E3D18B49A880096D5ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E3C18B49A880096D5ED /* Foundation.framework */; };
 		89CE3E3F18B49A880096D5ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E3E18B49A880096D5ED /* CoreGraphics.framework */; };
 		89CE3E4118B49A880096D5ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89CE3E4018B49A880096D5ED /* UIKit.framework */; };
@@ -45,13 +45,13 @@
 
 /* Begin PBXFileReference section */
 		894C26B118BC7EDE0066ADB5 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		894C26B318BC85440066ADB5 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
 		8973C2EB18B5BF830052346A /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
 		8973C2EC18B5BF830052346A /* hawk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hawk.png; sourceTree = "<group>"; };
 		8973C2EF18B7BFC60052346A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8973C2F018B7BFC60052346A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		89BF8D5918B590AA009DE7DC /* skybackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybackground.png; path = "Sky Diver/skybackground.png"; sourceTree = "<group>"; };
 		89BF8D5B18B59532009DE7DC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		89CC1FAE18BDD662001D7BD6 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
 		89CE3E3918B49A880096D5ED /* Free Faller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Faller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CE3E3C18B49A880096D5ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89CE3E3E18B49A880096D5ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -107,7 +107,7 @@
 		8973C2EA18B5BF6E0052346A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				894C26B318BC85440066ADB5 /* coin.png */,
+				89CC1FAE18BDD662001D7BD6 /* coin.png */,
 				89BF8D5918B590AA009DE7DC /* skybackground.png */,
 				89CE3E7C18B49CF00096D5ED /* diver.png */,
 				8973C2EB18B5BF830052346A /* cloud.png */,
@@ -288,7 +288,7 @@
 				8973C2EE18B5BF830052346A /* hawk.png in Resources */,
 				8973C2ED18B5BF830052346A /* cloud.png in Resources */,
 				89CE3E5C18B49A880096D5ED /* Images.xcassets in Resources */,
-				894C26B418BC85440066ADB5 /* coin.png in Resources */,
+				89CC1FAF18BDD662001D7BD6 /* coin.png in Resources */,
 				89BF8D5A18B590AA009DE7DC /* skybackground.png in Resources */,
 				89CE3E7D18B49CF00096D5ED /* diver.png in Resources */,
 				89CE3E5218B49A880096D5ED /* Main.storyboard in Resources */,

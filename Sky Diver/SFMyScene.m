@@ -11,6 +11,7 @@
 
 #define NUM_OF_HAWKS 10
 #define NUM_OF_CLOUDS 10
+#define NUM_OF_COINS 5
 #define MULTIPLIER_FOR_DIRECTION 1
 
 typedef enum : uint32_t {
@@ -26,8 +27,8 @@ typedef enum : uint32_t {
 
 @interface SFMyScene ()
 {
-    int _nextHawk, _nextCloud;
-    double _nextHawkSpawn, _nextCloudSpawn;
+    int _nextHawk, _nextCloud, _nextCoin;
+    double _nextHawkSpawn, _nextCloudSpawn, _nextCoinSpawn;
 }
 
 @property (strong, nonatomic) SKSpriteNode *mainCharacter, *coin;
@@ -53,6 +54,7 @@ typedef enum : uint32_t {
         
         _nextHawk = 0;
         _nextCloud = 0;
+        _nextCoin = 0;
         
         if (self.motionManager) {
             [self.motionManager startAccelerometerUpdates];
@@ -148,14 +150,16 @@ typedef enum : uint32_t {
             [self addChild:cloud];
         }
         
-        self.coinArray = [[NSMutableArray alloc] initWithCapacity:5];
+        self.coinArray = [[NSMutableArray alloc] initWithCapacity:NUM_OF_COINS];
         
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < NUM_OF_COINS; i++) {
             SKSpriteNode *coin = [SKSpriteNode spriteNodeWithImageNamed:@"coin"];
             coin.hidden = YES;
             coin.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:coin.size];
+            self.physicsBody.dynamic = NO;
+            coin.position = CGPointMake(150, -1000);
             [self.coinArray addObject:coin];
-            coin.position = CGPointMake(200, -1000);
+            
             [self addChild:coin];
         }
         
@@ -199,7 +203,7 @@ typedef enum : uint32_t {
 //            bg.position = CGPointMake(bg.position.x + bg.size.width * 2, bg.position.y);
 //        }
    // }];
-    
+    NSLog(@"%f", self.mainCharacter.position.y);
     
     double curTime = CACurrentMediaTime();
 //    NSLog(@"%f", curTime);
@@ -304,6 +308,41 @@ typedef enum : uint32_t {
         [cloud runAction:moveCloudActionWithDone];
         
     }
+    
+    
+    if (curTime > _nextCoinSpawn) {
+        float randSeconds = [self randomValueBetween:0.50f andValue:2.0f];
+        _nextCloudSpawn = randSeconds + curTime;
+        
+        float randX = [self randomValueBetween:0.0f andValue:self.frame.size.width];
+        float randDuration = [self randomValueBetween:5.0f andValue:8.0f];
+        
+        SKSpriteNode *coin = self.coinArray[_nextCoin];
+        _nextCoin++;
+        
+        if (_nextCoin >= self.coinArray.count) {
+            _nextCoin = 0;
+        }
+        
+        [coin removeAllActions];
+        
+        coin.hidden = NO;
+        
+        coin.position = CGPointMake(randX, 200);
+        
+        CGPoint location = CGPointMake(randX, 1000);
+        
+        SKAction *moveAction = [SKAction moveTo:location duration:randDuration];
+        SKAction *doneAction = [SKAction runBlock:^{
+            coin.hidden = YES;
+        }];
+        
+        SKAction *moveCoinActionWithDone = [SKAction sequence:@[moveAction, doneAction]];
+        
+        [coin runAction:moveCoinActionWithDone];
+        
+    }
+
 
     
     self.accelerometerData = self.motionManager.accelerometerData;
