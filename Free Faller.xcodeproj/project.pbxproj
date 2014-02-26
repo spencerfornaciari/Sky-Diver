@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		894C26B218BC7EDE0066ADB5 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894C26B118BC7EDE0066ADB5 /* GameKit.framework */; };
+		894C26B418BC85440066ADB5 /* coin.png in Resources */ = {isa = PBXBuildFile; fileRef = 894C26B318BC85440066ADB5 /* coin.png */; };
 		8973C2ED18B5BF830052346A /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 8973C2EB18B5BF830052346A /* cloud.png */; };
 		8973C2EE18B5BF830052346A /* hawk.png in Resources */ = {isa = PBXBuildFile; fileRef = 8973C2EC18B5BF830052346A /* hawk.png */; };
 		8973C2F118B7BFC60052346A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8973C2F018B7BFC60052346A /* Constants.m */; };
@@ -42,21 +44,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		894C26B118BC7EDE0066ADB5 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		894C26B318BC85440066ADB5 /* coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coin.png; sourceTree = "<group>"; };
 		8973C2EB18B5BF830052346A /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
 		8973C2EC18B5BF830052346A /* hawk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hawk.png; sourceTree = "<group>"; };
 		8973C2EF18B7BFC60052346A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8973C2F018B7BFC60052346A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		89BF8D5918B590AA009DE7DC /* skybackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skybackground.png; path = "Sky Diver/skybackground.png"; sourceTree = "<group>"; };
 		89BF8D5B18B59532009DE7DC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		89CE3E3918B49A880096D5ED /* Sky Diver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sky Diver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CE3E3918B49A880096D5ED /* Free Faller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Free Faller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CE3E3C18B49A880096D5ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		89CE3E3E18B49A880096D5ED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		89CE3E4018B49A880096D5ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		89CE3E4218B49A880096D5ED /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		89CE3E4618B49A880096D5ED /* Sky Diver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sky Diver-Info.plist"; sourceTree = "<group>"; };
+		89CE3E4618B49A880096D5ED /* Free Faller-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Free Faller-Info.plist"; sourceTree = "<group>"; };
 		89CE3E4818B49A880096D5ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89CE3E4A18B49A880096D5ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		89CE3E4C18B49A880096D5ED /* Sky Diver-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sky Diver-Prefix.pch"; sourceTree = "<group>"; };
+		89CE3E4C18B49A880096D5ED /* Free Faller-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Free Faller-Prefix.pch"; sourceTree = "<group>"; };
 		89CE3E4D18B49A880096D5ED /* SFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFAppDelegate.h; sourceTree = "<group>"; };
 		89CE3E4E18B49A880096D5ED /* SFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFAppDelegate.m; sourceTree = "<group>"; };
 		89CE3E5118B49A880096D5ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,9 +69,9 @@
 		89CE3E5618B49A880096D5ED /* SFMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFMyScene.h; sourceTree = "<group>"; };
 		89CE3E5718B49A880096D5ED /* SFMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFMyScene.m; sourceTree = "<group>"; };
 		89CE3E5B18B49A880096D5ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		89CE3E6118B49A880096D5ED /* Sky DiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sky DiverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CE3E6118B49A880096D5ED /* Free FallerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Free FallerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89CE3E6218B49A880096D5ED /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		89CE3E6A18B49A880096D5ED /* Sky DiverTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sky DiverTests-Info.plist"; sourceTree = "<group>"; };
+		89CE3E6A18B49A880096D5ED /* Free FallerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Free FallerTests-Info.plist"; sourceTree = "<group>"; };
 		89CE3E6C18B49A880096D5ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sky_DiverTests.m; sourceTree = "<group>"; };
 		89CE3E7C18B49CF00096D5ED /* diver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = diver.png; path = "Sky Diver/diver.png"; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 				89BF8D5C18B59532009DE7DC /* CoreMotion.framework in Frameworks */,
 				89CE3E3F18B49A880096D5ED /* CoreGraphics.framework in Frameworks */,
 				89CE3E4118B49A880096D5ED /* UIKit.framework in Frameworks */,
+				894C26B218BC7EDE0066ADB5 /* GameKit.framework in Frameworks */,
 				89CE3E4318B49A880096D5ED /* SpriteKit.framework in Frameworks */,
 				89CE3E3D18B49A880096D5ED /* Foundation.framework in Frameworks */,
 			);
@@ -102,6 +107,7 @@
 		8973C2EA18B5BF6E0052346A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				894C26B318BC85440066ADB5 /* coin.png */,
 				89BF8D5918B590AA009DE7DC /* skybackground.png */,
 				89CE3E7C18B49CF00096D5ED /* diver.png */,
 				8973C2EB18B5BF830052346A /* cloud.png */,
@@ -114,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				8973C2EA18B5BF6E0052346A /* Images */,
-				89CE3E4418B49A880096D5ED /* Sky Diver */,
-				89CE3E6818B49A880096D5ED /* Sky DiverTests */,
+				89CE3E4418B49A880096D5ED /* Free Faller */,
+				89CE3E6818B49A880096D5ED /* Free FallerTests */,
 				89CE3E3B18B49A880096D5ED /* Frameworks */,
 				89CE3E3A18B49A880096D5ED /* Products */,
 			);
@@ -124,8 +130,8 @@
 		89CE3E3A18B49A880096D5ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				89CE3E3918B49A880096D5ED /* Sky Diver.app */,
-				89CE3E6118B49A880096D5ED /* Sky DiverTests.xctest */,
+				89CE3E3918B49A880096D5ED /* Free Faller.app */,
+				89CE3E6118B49A880096D5ED /* Free FallerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +139,7 @@
 		89CE3E3B18B49A880096D5ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				894C26B118BC7EDE0066ADB5 /* GameKit.framework */,
 				89BF8D5B18B59532009DE7DC /* CoreMotion.framework */,
 				89CE3E3C18B49A880096D5ED /* Foundation.framework */,
 				89CE3E3E18B49A880096D5ED /* CoreGraphics.framework */,
@@ -143,7 +150,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		89CE3E4418B49A880096D5ED /* Sky Diver */ = {
+		89CE3E4418B49A880096D5ED /* Free Faller */ = {
 			isa = PBXGroup;
 			children = (
 				89CE3E4D18B49A880096D5ED /* SFAppDelegate.h */,
@@ -158,33 +165,35 @@
 				89CE3E5B18B49A880096D5ED /* Images.xcassets */,
 				89CE3E4518B49A880096D5ED /* Supporting Files */,
 			);
+			name = "Free Faller";
 			path = "Sky Diver";
 			sourceTree = "<group>";
 		};
 		89CE3E4518B49A880096D5ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				89CE3E4618B49A880096D5ED /* Sky Diver-Info.plist */,
+				89CE3E4618B49A880096D5ED /* Free Faller-Info.plist */,
 				89CE3E4718B49A880096D5ED /* InfoPlist.strings */,
 				89CE3E4A18B49A880096D5ED /* main.m */,
-				89CE3E4C18B49A880096D5ED /* Sky Diver-Prefix.pch */,
+				89CE3E4C18B49A880096D5ED /* Free Faller-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		89CE3E6818B49A880096D5ED /* Sky DiverTests */ = {
+		89CE3E6818B49A880096D5ED /* Free FallerTests */ = {
 			isa = PBXGroup;
 			children = (
 				89CE3E6E18B49A880096D5ED /* Sky_DiverTests.m */,
 				89CE3E6918B49A880096D5ED /* Supporting Files */,
 			);
+			name = "Free FallerTests";
 			path = "Sky DiverTests";
 			sourceTree = "<group>";
 		};
 		89CE3E6918B49A880096D5ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				89CE3E6A18B49A880096D5ED /* Sky DiverTests-Info.plist */,
+				89CE3E6A18B49A880096D5ED /* Free FallerTests-Info.plist */,
 				89CE3E6B18B49A880096D5ED /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -193,9 +202,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		89CE3E3818B49A880096D5ED /* Sky Diver */ = {
+		89CE3E3818B49A880096D5ED /* Free Faller */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 89CE3E7218B49A880096D5ED /* Build configuration list for PBXNativeTarget "Sky Diver" */;
+			buildConfigurationList = 89CE3E7218B49A880096D5ED /* Build configuration list for PBXNativeTarget "Free Faller" */;
 			buildPhases = (
 				89CE3E3518B49A880096D5ED /* Sources */,
 				89CE3E3618B49A880096D5ED /* Frameworks */,
@@ -205,14 +214,14 @@
 			);
 			dependencies = (
 			);
-			name = "Sky Diver";
+			name = "Free Faller";
 			productName = "Sky Diver";
-			productReference = 89CE3E3918B49A880096D5ED /* Sky Diver.app */;
+			productReference = 89CE3E3918B49A880096D5ED /* Free Faller.app */;
 			productType = "com.apple.product-type.application";
 		};
-		89CE3E6018B49A880096D5ED /* Sky DiverTests */ = {
+		89CE3E6018B49A880096D5ED /* Free FallerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 89CE3E7518B49A880096D5ED /* Build configuration list for PBXNativeTarget "Sky DiverTests" */;
+			buildConfigurationList = 89CE3E7518B49A880096D5ED /* Build configuration list for PBXNativeTarget "Free FallerTests" */;
 			buildPhases = (
 				89CE3E5D18B49A880096D5ED /* Sources */,
 				89CE3E5E18B49A880096D5ED /* Frameworks */,
@@ -223,9 +232,9 @@
 			dependencies = (
 				89CE3E6718B49A880096D5ED /* PBXTargetDependency */,
 			);
-			name = "Sky DiverTests";
+			name = "Free FallerTests";
 			productName = "Sky DiverTests";
-			productReference = 89CE3E6118B49A880096D5ED /* Sky DiverTests.xctest */;
+			productReference = 89CE3E6118B49A880096D5ED /* Free FallerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -238,12 +247,20 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Spencer Fornaciari";
 				TargetAttributes = {
+					89CE3E3818B49A880096D5ED = {
+						DevelopmentTeam = 98932SP3YP;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
 					89CE3E6018B49A880096D5ED = {
 						TestTargetID = 89CE3E3818B49A880096D5ED;
 					};
 				};
 			};
-			buildConfigurationList = 89CE3E3418B49A880096D5ED /* Build configuration list for PBXProject "Sky Diver" */;
+			buildConfigurationList = 89CE3E3418B49A880096D5ED /* Build configuration list for PBXProject "Free Faller" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -256,8 +273,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				89CE3E3818B49A880096D5ED /* Sky Diver */,
-				89CE3E6018B49A880096D5ED /* Sky DiverTests */,
+				89CE3E3818B49A880096D5ED /* Free Faller */,
+				89CE3E6018B49A880096D5ED /* Free FallerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,6 +288,7 @@
 				8973C2EE18B5BF830052346A /* hawk.png in Resources */,
 				8973C2ED18B5BF830052346A /* cloud.png in Resources */,
 				89CE3E5C18B49A880096D5ED /* Images.xcassets in Resources */,
+				894C26B418BC85440066ADB5 /* coin.png in Resources */,
 				89BF8D5A18B590AA009DE7DC /* skybackground.png in Resources */,
 				89CE3E7D18B49CF00096D5ED /* diver.png in Resources */,
 				89CE3E5218B49A880096D5ED /* Main.storyboard in Resources */,
@@ -313,7 +331,7 @@
 /* Begin PBXTargetDependency section */
 		89CE3E6718B49A880096D5ED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 89CE3E3818B49A880096D5ED /* Sky Diver */;
+			target = 89CE3E3818B49A880096D5ED /* Free Faller */;
 			targetProxy = 89CE3E6618B49A880096D5ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -423,10 +441,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sky Diver/Sky Diver-Prefix.pch";
-				INFOPLIST_FILE = "Sky Diver/Sky Diver-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Sky Diver/Free Faller-Prefix.pch";
+				INFOPLIST_FILE = "Sky Diver/Free Faller-Info.plist";
+				PRODUCT_NAME = "Free Faller";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -437,10 +458,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sky Diver/Sky Diver-Prefix.pch";
-				INFOPLIST_FILE = "Sky Diver/Sky Diver-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Sky Diver/Free Faller-Prefix.pch";
+				INFOPLIST_FILE = "Sky Diver/Free Faller-Info.plist";
+				PRODUCT_NAME = "Free Faller";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -462,8 +486,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Sky DiverTests/Sky DiverTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Sky DiverTests/Free FallerTests-Info.plist";
+				PRODUCT_NAME = "Free FallerTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -481,8 +505,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sky Diver/Sky Diver-Prefix.pch";
-				INFOPLIST_FILE = "Sky DiverTests/Sky DiverTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Sky DiverTests/Free FallerTests-Info.plist";
+				PRODUCT_NAME = "Free FallerTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -491,7 +515,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		89CE3E3418B49A880096D5ED /* Build configuration list for PBXProject "Sky Diver" */ = {
+		89CE3E3418B49A880096D5ED /* Build configuration list for PBXProject "Free Faller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				89CE3E7018B49A880096D5ED /* Debug */,
@@ -500,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89CE3E7218B49A880096D5ED /* Build configuration list for PBXNativeTarget "Sky Diver" */ = {
+		89CE3E7218B49A880096D5ED /* Build configuration list for PBXNativeTarget "Free Faller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				89CE3E7318B49A880096D5ED /* Debug */,
@@ -509,7 +533,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89CE3E7518B49A880096D5ED /* Build configuration list for PBXNativeTarget "Sky DiverTests" */ = {
+		89CE3E7518B49A880096D5ED /* Build configuration list for PBXNativeTarget "Free FallerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				89CE3E7618B49A880096D5ED /* Debug */,

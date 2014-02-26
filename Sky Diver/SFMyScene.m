@@ -16,7 +16,8 @@
 typedef enum : uint32_t {
     skyDiverCategory = 0x1 << 0,
     hawkCategory = 0x1 << 1,
-    cloudCategory = 0x1 << 2
+    cloudCategory = 0x1 << 2,
+    coinCategory = 0x1 << 3
 } SkyDiverTypes;
 
 //static const uint32_t skydiverCategory = 0x1 << 0;
@@ -29,11 +30,12 @@ typedef enum : uint32_t {
     double _nextHawkSpawn, _nextCloudSpawn;
 }
 
-@property (strong, nonatomic) SKSpriteNode *mainCharacter;
+@property (strong, nonatomic) SKSpriteNode *mainCharacter, *coin;
 @property (nonatomic) SKLabelNode *timeLabel, *lifeLabel;
 
 @property (strong, nonatomic) NSMutableArray *hawkArray;
 @property (strong, nonatomic) NSMutableArray *cloudArray;
+@property (nonatomic) NSMutableArray *coinArray;
 @property (nonatomic) int time, gameTime, internalClock, lives;
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
@@ -77,6 +79,8 @@ typedef enum : uint32_t {
         self.lifeLabel.fontColor = [UIColor blackColor];
         self.lifeLabel.fontSize = 20;
         self.lifeLabel.position = CGPointMake(50, 50);
+        
+        self.coinArray = [NSMutableArray new];
         
         
         for (int i = 0; i < 2; i++) {
@@ -143,6 +147,18 @@ typedef enum : uint32_t {
             
             [self addChild:cloud];
         }
+        
+        self.coinArray = [[NSMutableArray alloc] initWithCapacity:5];
+        
+        for (int i = 0; i < 5; i++) {
+            SKSpriteNode *coin = [SKSpriteNode spriteNodeWithImageNamed:@"coin"];
+            coin.hidden = YES;
+            coin.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:coin.size];
+            [self.coinArray addObject:coin];
+            coin.position = CGPointMake(200, -1000);
+            [self addChild:coin];
+        }
+        
         [self addChild:self.timeLabel];
         [self addChild:self.lifeLabel];
         _internalClock = (int)CACurrentMediaTime() + 1;
@@ -311,6 +327,13 @@ typedef enum : uint32_t {
     if (contact.bodyA.categoryBitMask == skyDiverCategory && contact.bodyB.categoryBitMask == hawkCategory) {
         NSLog(@"Ouch!");
         _lives--;
+        if ([contact.bodyB.node.name isEqualToString:@"hawk"]) {
+            [contact.bodyB.node removeFromParent];
+        }
+        
+        if ([contact.bodyA.node.name isEqualToString:@"hawk"]) {
+            [contact.bodyA.node removeFromParent];
+        }
     } else {
         NSLog(@"No Problemo!");
     }
