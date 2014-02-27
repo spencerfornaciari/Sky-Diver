@@ -153,7 +153,7 @@ typedef enum : uint32_t {
             coin.physicsBody.allowsRotation = NO;
             coin.physicsBody.categoryBitMask = coinCategory;
             coin.physicsBody.collisionBitMask = 0;
-            coin.physicsBody.contactTestBitMask = 0;
+            coin.physicsBody.contactTestBitMask = skyDiverCategory;
             coin.position = CGPointMake(150, 1000);
             [self.coinArray addObject:coin];
             
@@ -364,7 +364,11 @@ typedef enum : uint32_t {
         if ([contact.bodyA.node.name isEqualToString:@"hawk"]) {
             [contact.bodyA.node removeFromParent];
         }
-    } else {
+    } else if (contact.bodyA.categoryBitMask == skyDiverCategory && contact.bodyB.categoryBitMask == coinCategory){
+        NSLog(@"GETTING PAID");
+    }
+    
+    else {
         NSLog(@"No Problemo!");
     }
 }
