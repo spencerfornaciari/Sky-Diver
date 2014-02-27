@@ -11,7 +11,7 @@
 
 #define NUM_OF_HAWKS 10
 #define NUM_OF_CLOUDS 10
-#define NUM_OF_COINS 5
+#define NUM_OF_COINS 10
 #define MULTIPLIER_FOR_DIRECTION 1
 
 typedef enum : uint32_t {
@@ -20,10 +20,6 @@ typedef enum : uint32_t {
     cloudCategory = 0x1 << 2,
     coinCategory = 0x1 << 3
 } SkyDiverTypes;
-
-//static const uint32_t skydiverCategory = 0x1 << 0;
-//static const uint32_t hawkCategory = 0x1 << 1;
-//static const uint32_t cloudCategory = 0x1 << 2;
 
 @interface SFMyScene ()
 {
@@ -66,10 +62,10 @@ typedef enum : uint32_t {
         self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         self.physicsWorld.contactDelegate = self;
         
-        
         _gameTime = 0;
         _internalClock = 0;
         _lives = 1;
+        
         self.timeLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica-CondensedMedium"];
         self.timeLabel.text = [NSString stringWithFormat:@"Time: %d", _gameTime];
         self.timeLabel.fontColor = [UIColor blackColor];
@@ -81,9 +77,6 @@ typedef enum : uint32_t {
         self.lifeLabel.fontColor = [UIColor blackColor];
         self.lifeLabel.fontSize = 20;
         self.lifeLabel.position = CGPointMake(50, 50);
-        
-        self.coinArray = [NSMutableArray new];
-        
         
         for (int i = 0; i < 2; i++) {
             SKSpriteNode *bg = [SKSpriteNode spriteNodeWithImageNamed:@"skybackground.png"];
@@ -156,8 +149,12 @@ typedef enum : uint32_t {
             SKSpriteNode *coin = [SKSpriteNode spriteNodeWithImageNamed:@"coin"];
             coin.hidden = YES;
             coin.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:coin.size];
-            self.physicsBody.dynamic = NO;
-            coin.position = CGPointMake(150, -1000);
+            coin.physicsBody.dynamic = NO;
+            coin.physicsBody.allowsRotation = NO;
+            coin.physicsBody.categoryBitMask = coinCategory;
+            coin.physicsBody.collisionBitMask = 0;
+            coin.physicsBody.contactTestBitMask = 0;
+            coin.position = CGPointMake(150, 1000);
             [self.coinArray addObject:coin];
             
             [self addChild:coin];
@@ -203,7 +200,7 @@ typedef enum : uint32_t {
 //            bg.position = CGPointMake(bg.position.x + bg.size.width * 2, bg.position.y);
 //        }
    // }];
-    NSLog(@"%f", self.mainCharacter.position.y);
+//    NSLog(@"%f", self.mainCharacter.position.y);
     
     double curTime = CACurrentMediaTime();
 //    NSLog(@"%f", curTime);
@@ -252,8 +249,6 @@ typedef enum : uint32_t {
              hawk.xScale = fabs(hawk.xScale) * -MULTIPLIER_FOR_DIRECTION;
         }
         
-        //CGPoint location = CGPointMake(-600, randY);
-        
         SKAction *moveAction = [SKAction moveTo:location duration:randDuration];
         SKAction *doneAction = [SKAction runBlock:^{
             hawk.hidden = YES;
@@ -266,7 +261,7 @@ typedef enum : uint32_t {
     }
     
     if (curTime > _nextCloudSpawn) {
-        float randSeconds = [self randomValueBetween:0.20f andValue:1.0f];
+        float randSeconds = [self randomValueBetween:4.0f andValue:8.0f];
         _nextCloudSpawn = randSeconds + curTime;
         
         float randY = [self randomValueBetween:0.0f andValue:self.frame.size.height];
@@ -311,8 +306,8 @@ typedef enum : uint32_t {
     
     
     if (curTime > _nextCoinSpawn) {
-        float randSeconds = [self randomValueBetween:0.50f andValue:2.0f];
-        _nextCloudSpawn = randSeconds + curTime;
+        float randSeconds = [self randomValueBetween:0.50f andValue:1.0f];
+        _nextCoinSpawn = randSeconds + curTime;
         
         float randX = [self randomValueBetween:0.0f andValue:self.frame.size.width];
         float randDuration = [self randomValueBetween:5.0f andValue:8.0f];
@@ -328,8 +323,7 @@ typedef enum : uint32_t {
         
         coin.hidden = NO;
         
-        coin.position = CGPointMake(randX, 200);
-        
+        coin.position = CGPointMake(randX, -200);
         CGPoint location = CGPointMake(randX, 1000);
         
         SKAction *moveAction = [SKAction moveTo:location duration:randDuration];
@@ -340,14 +334,11 @@ typedef enum : uint32_t {
         SKAction *moveCoinActionWithDone = [SKAction sequence:@[moveAction, doneAction]];
         
         [coin runAction:moveCoinActionWithDone];
-        
     }
 
 
     
     self.accelerometerData = self.motionManager.accelerometerData;
-    
-    //NSLog(@"%f", self.accelerometerData.acceleration.x);
     
     self.mainCharacter.position = CGPointMake(self.mainCharacter.position.x + self.accelerometerData.acceleration.x * 10, self.mainCharacter.position.y + self.accelerometerData.acceleration.y * 2);
 }
